@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html ng-app="InnoTymApp">
+<head>
+    <title>InnoTym</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/font-awesome.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+
+    <link href="Content/style.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <!--<a href="#!/home"> HOME </a>
+    <a href="#!/login"> LOGIN </a>-->
+
+    <div ng-include="'App/Header/header.html'"></div>
+    
+    <div ng-view></div>
+
+    <div ng-include="'App/Footer/footer.html'"></div>
+
+   
+
+    <!-- =========================================== Practice  Start =========================================== -->
+
+    <!--<div class="container-fluid" >-->
+
+        <!--<custom-Directive></custom-Directive>-->
+
+        <!-- ng-init="txtno1=10;txtno2=5"--> 
+
+       <!--<br />
+        <label for="Number"><b>Enter Number1</b></label><br /><br />
+        <input type="number" ng-model="Number1"/><br/><br />
+        <label for="Number"><b>Enter Number2</b></label><br /><br />
+        <input type="number" ng-model="Number2"/><br/><br />-->
+
+           <!--<select ng-model="operation">
+               <option selected="selected" value="Add">Add</option>
+               <option value="Sub">Sub</option>
+               <option value="Div">Div</option>
+               <option value="Mul">Mul</option>
+
+
+           </select>-->
+        <!--<input type="button" value="Add" ng-click="AddNo()" />
+        <input type="button" value="Sub" ng-click="SubNo()" />
+        <input type="button" value="Div" ng-click="DivNo()" />
+        <input type="button" value="Mul" ng-click="MulNo()" />
+        <br />
+        <br />
+        <label>{{result}}</label>-->
+
+        <!--<button type="submit" ng-click="calculateResult()"> Calculate </button>-->
+        <!--<br />
+        <br />
+        <label for="Number"><b>Result</b></label><br /><br />
+        <label>{{result}}</label>
+        <br />-->
+
+       
+
+
+
+
+        <!--<input type="button" value="add" ng-click="result = txtno1 + txtno2" /><br/><br/>
+        <input type="button" value="sub" ng-click="result = txtno1 - txtno2" /><br /><br />
+        <input type="button" value="div" ng-click="result = txtno1 / txtno2" /><br /><br />
+        <input type="button" value="mul" ng-click="result = txtno1 * txtno2" /><br /><br />
+        <label for="Number"><b>Result</b></label><br /><br />
+        <label>{{result}}</label>-->
+
+    <!--</div>-->
+
+    <!--<div class="container-fluid">
+         <h3> Count is {{count}} </h3>
+        <div ng-init="count=0">
+            <button ng-click="count=count+1">Add One</button>
+            <h3> Double The Count : {{2 * count}} </h3>
+        </div>
+
+    </div>-->
+    <!--<br /><br />-->
+    <!--<div class="container-fluid">
+        <h3> Count is {{count1}} </h3>
+        <div ng-init="count1=0">
+            <button ng-click="count1=count1-1">Sub One</button>
+            <h3> Double The Count : {{2 * count1}} </h3>
+        </div>
+
+    </div>-->
+
+     <!--  =================================== Practice End ================================  -->
+   
+
+    <script src="scripts/jquery-3.0.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/angular-local-storage.min.js"></script>
+    <script src="scripts/angular-route.js"></script>
+
+    <!-- ================================ Load Application Module ========================== -->
+
+    <script src="App/app.js"></script>
+
+
+
+    <!-- ================================Load Controller Module ================================ -->
+
+    <script src="App/Controller/HomeController.js"></script>
+    <script src="App/Controller/loginController.js"></script>
+    <script src="App/Header/headerController.js"></script>
+    <script src="App/Controller/transactionController.js"></script>
+    <script src="App/Controller/addMoneyController.js"></script>
+
+
+    <!--===================================== LOAD SERVICES ===================================-->
+
+    <script src="App/Services/userService.js"></script>
+    <script src="App/Services/transactionService.js"></script>
+
+</body>
+</html>

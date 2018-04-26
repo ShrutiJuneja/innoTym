@@ -1,0 +1,37 @@
+﻿<br />
+
+
+<!--================ FUNCTION CALL ==================-->
+<div data-ng-init="getTransaction()">
+    <!--================ FUNCTION CALL ==================-->
+
+    <div class="container-fluid text-center">
+        <div>
+            <div>
+                <label for="Search User"><b>Transaction List</b></label><br />
+                <!--<input class="searchBar" type="text" placeholder="Transaction List">-->
+            </div>
+        </div>
+        <table class="table table-bordered">
+            <tr>
+                <th>transId</th>
+                <th>userId</th>
+                <th>refId</th>
+                <th>transType</th>
+                <th>initialAmount</th>
+                <th>amount</th>
+               
+            </tr>
+            <tr ng-repeat="transaction in transactionList">
+                <!--<tr ng-repeat="users in user">-->
+                <td>{{transaction.transId}}</td>
+                <td>{{transaction.userId}}</td>
+                <td>{{transaction.user.userName}}</td>
+                <td>{{transaction.transType}}</td>
+                <td>{{transaction.initialAmount}}</td>
+                <td>{{transaction.amount}}</td>
+               
+            </tr>
+        </table>
+    </div>
+</div>

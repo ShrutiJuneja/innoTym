@@ -1,0 +1,184 @@
+﻿<br />
+<br />
+<!-- ============================================== LOGIN PAGE =============================================== -->
+
+<div class="container">
+    <div id="loginbox" ng-show="showLogin">
+        <div class="card">
+
+            <h5 class="card-header bg-info">Sign In</h5>
+            <div class="card-body">
+                <form class="form-horizontal" role="form" name="loginform" novalidate>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-2 field-label-responsive">
+                            <label for="email">E-Mail Address</label>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="form-group">
+                                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                    <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
+                                    <input type="text" name="useremail" class="form-control" id="email" placeholder="you@example.com" required ng-model="loginData.Email" ng-class="{'has-error':loginform.useremail.$invalid && loginform.useremail.$dirty}">
+                                    <div>
+                                    <span class="help-block text-danger" ng-if="loginform.useremail.$error.required && loginform.useremail.$dirty">UserEmail Is Required</span>
+                                    <span class="help-block text-danger" ng-if="loginform.useremail.$error.email">This Is Not a Valid Email</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 field-label-responsive">
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="form-group has-danger">
+                                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                    <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-key"></i></div>
+                                    <input type="password" name="userpassword" class="form-control" id="password" placeholder="Password" required ng-model="loginData.Password" ng-class="{'has-error':loginform.userpassword.$invalid && loginform.userpassword.$dirty}">
+                                  <div>
+                                        <span class="help-block text-danger" ng-if="loginform.userpassword.$error.required && loginform.userpassword.$dirty">UserPassword Is Required</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+             
+                    <div style="margin-top:10px" class="form-group text-center">
+                        <!-- Button -->
+                        <div>
+                            <a id="btn-login" href="" class="btn btn-success" ng-click="login()"> Sign In </a>
+
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="control text-center">
+                            <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%">
+                                Don't have an account!
+                                <button type="button" class="btn btn-info" ng-click="showRegisterPanel()"> sign up here </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+                <div class="alert alert-danger" ng-show="showError">
+                    <strong> Error </strong> Invalid Username Or Password
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--=============================================== REGISTER PAGE =============================================  -->
+
+<div class="container">
+    <div id="signupbox" ng-show="showRegister">
+        <div class="card">
+            <div class="card-header bg-info">
+                <h4 class="pull-left">Sign Up</h4><h5 class="pull-right" ng-click="showLoginPanel()" style="cursor:pointer">Sign In</h5>
+            </div>
+            
+            
+
+           <div class="card-body">
+                <form name="signupform" class="form-horizontal" role="form" novalidate>
+                    <br />
+
+                    <div class="form-group row">
+                        <label for="inputUser" class="col-sm-2 col-form-label">User Name</label>
+                        <div class="col-sm-10" >
+                            <input type="text" class="form-control" id="inputUser" name="username" placeholder="User Name" ng-model="registerData.userName" required ng-class="{'has-error':signupform.username.$invalid && signupform.username.$dirty}">
+                            <div>
+                                <span class="help-block text-danger" ng-if="signupform.username.$error.required && signupform.username.$dirty">UserName Is Required</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="inputEmail3" name="useremail" placeholder="Email" ng-model="registerData.email" required  ng-class="{'has-error':signupform.useremail.$invalid && signupform.useremail.$dirty}">
+                            <div>
+                                <span class="help-block text-danger" ng-if="signupform.useremail.$error.required && signupform.useremail.$dirty">UserEmail Is Required</span>
+                                <span class="help-block text-danger" ng-if="signupform.useremail.$error.email">This Is Not a Valid Email</span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="inputPassword3" name="userpassword" placeholder="Password" ng-model="registerData.userPassword" required  ng-class="{'has-error':signupform.userpassword.$invalid && signupform.userpassword.$dirty}">
+                            <div>
+                                <span class="help-block text-danger" ng-if="signupform.userpassword.$error.required && signupform.userpassword.$dirty">UserPassword Is Required</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputPhoneNumber" class="col-sm-2 col-form-label">Phone Number</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputPhoneNumber" placeholder="Phone Number" ng-model="registerData.PhoneNo">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputPassword3" class="col-sm-2 col-form-label">Gender</label>
+                        <div class="col-sm-5">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" ng-model="registerData.gender" value="Male">
+                                <label class="custom-control-label" for="customRadioInline1">Male</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-5">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" ng-model="registerData.gender" value="Female">
+                                <label class="custom-control-label" for="customRadioInline2">Female</label>
+                            </div>
+                        </div>
+                        </div>
+                    
+                        
+                                        
+                    
+                    <div class="form-group row">
+                            <label for="inputamount" class="col-sm-2 col-form-label">Amount</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputamount" name="useramount" placeholder="Amount" ng-model="registerData.amount" required  ng-class="{'has-error':signupform.useramount.$invalid && signupform.useramount.$dirty}">
+                                <div>
+                                    <span class="help-block text-danger" ng-if="signupform.useramount.$error.required && signupform.useramount.$dirty">UserAmount Is Required</span>
+                                </div>
+                            </div>
+                        </div>
+
+                   
+                    <div class="form-group row">
+                        <label for="inputamount" class="col-sm-2 col-form-label">Age</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputage" placeholder="Age" ng-model="registerData.age">
+                        </div>
+                    </div>
+                        <div class="form-group row">
+                            <div class="col-sm-10 text-center">
+                                <!--<div style="border-top: 1px solid#888; padding-top:15px; font-size:85%">-->
+                                    <button type="button" ng-disabled="signupform.$pristine || signupform.$dirty && signupform.$invalid" class="btn btn-info" ng-click="register()"> sign up here </button>
+                                <!--</div>-->
+                                </div>
+                        </div>
+                   
+            </form>
+
+               <div class="alert alert-danger" ng-show="showError">
+                   <strong> Error </strong> Fail To Register
+               </div>
+
+       </div>
+     </div>
+   </div>
+</div>

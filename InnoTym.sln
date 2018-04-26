@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{2CC9CFE4-2469-42F0-BE0A-510EEEDC74D4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DATA", "DATA", "{AAF5EE29-7838-47CB-AE26-0149DEAD4CCE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WEB", "WEB", "{9B9BD99C-8906-4A0F-BAD7-78E405CD84C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InnoTym.data", "InnoTym.data\InnoTym.data.csproj", "{9061123B-C9BD-4EB3-9B2C-CA446D49EE53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InnoTym.web", "InnoTym.web\InnoTym.web.csproj", "{320D0A87-FAFC-4599-B3A6-635BECA88090}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InnoTym.api", "InnoTym.api\InnoTym.api.csproj", "{FDFC118C-39A8-4325-BE56-3E12AAEAAD37}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9061123B-C9BD-4EB3-9B2C-CA446D49EE53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9061123B-C9BD-4EB3-9B2C-CA446D49EE53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9061123B-C9BD-4EB3-9B2C-CA446D49EE53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9061123B-C9BD-4EB3-9B2C-CA446D49EE53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{320D0A87-FAFC-4599-B3A6-635BECA88090}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{320D0A87-FAFC-4599-B3A6-635BECA88090}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{320D0A87-FAFC-4599-B3A6-635BECA88090}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{320D0A87-FAFC-4599-B3A6-635BECA88090}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDFC118C-39A8-4325-BE56-3E12AAEAAD37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDFC118C-39A8-4325-BE56-3E12AAEAAD37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDFC118C-39A8-4325-BE56-3E12AAEAAD37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDFC118C-39A8-4325-BE56-3E12AAEAAD37}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9061123B-C9BD-4EB3-9B2C-CA446D49EE53} = {AAF5EE29-7838-47CB-AE26-0149DEAD4CCE}
+		{320D0A87-FAFC-4599-B3A6-635BECA88090} = {9B9BD99C-8906-4A0F-BAD7-78E405CD84C5}
+		{FDFC118C-39A8-4325-BE56-3E12AAEAAD37} = {2CC9CFE4-2469-42F0-BE0A-510EEEDC74D4}
+	EndGlobalSection
+EndGlobal
